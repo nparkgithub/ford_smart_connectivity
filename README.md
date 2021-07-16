@@ -1,5 +1,5 @@
 # ford_smart_connectivity
-https://github.com/nparkgithub/ford_smart_connectivity/blob/main/Screen%20Shot%202021-07-16%20at%209.49.04%20AM.png
+![Software components flow](https://github.com/nparkgithub/ford_smart_connectivity/blob/main/Screen%20Shot%202021-07-16%20at%209.49.04%20AM.png)
 
 ## Python Package installation
   Tested on MAC and Smart phone
