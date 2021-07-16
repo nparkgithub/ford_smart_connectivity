@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body style="background-color:powderblue;">
+<meta http-equiv="refresh" content="5" />
+<style>
+.container {
+  <!position: relative;>
+  width: 100%;
+  max-width: 400px;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.container .btn1 {
+<!  position: absolute;
+  top: 50%;
+  left: 50%;>
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.container .btn1:hover {
+  background-color: black;
+}
+</style>
+</head>
+<body>
+
+<h2 style="color: green;text-align: center;">Ford EV Car Simulator </h2>
+<p> Vehicle id:{{vehicle_id}} 
+<p> Model:{{model_name}} Year:{{model_year}} </p>
+<style>
+.img-holder {position: relative;}
+.img-holder .link0 {
+    position: absolute;
+    bottom: 50px; /*your button position*/
+    left: 1%; /*your button position*/
+}
+.img-holder .link1 {
+    position: absolute;
+    bottom: 50px; /*your button position*/
+    left: 20%; /*your button position*/
+}
+.img-holder {position: absolute;}
+.img-holder .link2 {
+    position: absolute;
+    bottom: 50px; /*your button position*/
+    left: 40%; /*your button position*/
+}
+.img-holder {position: absolute;}
+.img-holder .link3 {
+    position: absolute;
+    bottom: 50px; /*your button position*/
+    left: 60%; /*your button position*/
+}
+.img-holder {position: absolute;height: 100px;
+  width: 500px;}
+.img-holder .link4 {
+    position: absolute;
+    bottom: 50px; /*your button position*/
+    left: 80%; /*your button position*/
+}
+img-holder {position: absolute;height: 100px;
+  width: 500px;}
+.img-holder .link41 {
+    position: absolute;
+    bottom: 30px; /*your button position*/
+    left: 1%; /*your button position*/
+}
+.img-holder {position: absolute;height: 100px;
+  width: 500px;}
+.img-holder .link7 {
+    position: absolute;
+    bottom: 50px; /*your button position*/
+    right: 50px; /*your button position*/
+}
+
+.img-holder .link5 {
+    position: absolute;
+    top: 110px;
+    left: 120px; /*your button position*/
+}
+.img-holder .link6 {
+    position: absolute;
+    top: 360px;
+    left: 10px; /*your button position*/
+}
+.blink {
+  animation: blink 1s steps(1, end) infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+</style>
+<!--
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+  setInterval(function(){
+    $.get('/simulator/update',function(data) {
+        // here, we have the data object returned by 'price' endpoint
+        // you can access its attributes as a regular JSON object
+        document.getElementById("update").innerHTML = data.value;
+    });
+  }, 2000);
+</script>
+-->
+<div class="img-holder">
+    <img src="https://img2.pngio.com/electric-car-png-images-free-download-electric-vehicle-png-512_512.png" alt="image description" width="500" height="500">
+    <a class="link0" href="/simulator/StartEngine">Start Engine </a>
+    <a class="link1" href="/simulator/Alarm">Alarm Engine </a>
+    <a class="link2" href="/simulator/Stolen">Car Stolen </a>
+    <a class="link3" href="/simulator/HomeArrival">Home Arrival </a>
+    <a class="link4" href="/simulator/EvSchedule">EV Schedule</a>
+    <a class="link41" href="/simulator/StopEngine">Stop Engine </a>
+    <div class="link5">
+        <h2 style="color: blue;text-align: center;">Operation Status</h2>
+        <p id="op_status">
+            <span class="blink">{{op_status}}</span>
+        </p>
+    </div>
+    <div class="link6">
+        <p> Start ON/OFF ==>  {{ startengine  }}</p>
+        <p> Alarm ON/OFF ==>  {{ alarm  }}</p>
+        <p> Home Arrival ON/OFF ==>  {{ home  }}</p>
+        <p> EV Schduel ON/OFF ==>  {{ charging  }}</p>
+        <p> Stop Engine ON/OFF ==>  {{ stopengine  }}</p>
+    </div>
+<br>
+<h3 style="color: green;"> ---------------------------------------------  </h3>
+<h2 style="color: blue;"> Ford Rest API REQ/RESP Messages  </h2>
+<div style="height:100px;width:500px;overflow:auto;border:8px solid yellowgreen;padding:2%">
+    {{ log_msg }}
+</div>
+        <p id="update">
+        </p>
+<br>
+
+</body>
+</html>
+
