@@ -11,3 +11,6 @@ python python3 fordsmartcar.py
 http://127.0.0.1:5000/
 ## Ford connectivity dashbord
 http://127.0.0.1:5000/dash
+
+## Operation video:
+ [Video link on Yotube](https://youtu.be/k6EXuPOXjd8)
