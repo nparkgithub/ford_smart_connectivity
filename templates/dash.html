@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body style="background-color:powderblue;">
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+  setInterval(function(){
+    $.get('/notification',function(data) {
+        // here, we have the data object returned by 'price' endpoint
+        // you can access its attributes as a regular JSON object
+        document.getElementById("notification").innerHTML = data.value;
+    });
+  }, 3000);
+</script>
+
+<style>
+<iframe 
+                 width="100%"
+                 height="400px"
+                 src="https://www.youtube.com/embed/gmAU8MJoJU4?autoplay=1&mute=1" name="dashFrame" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>h1 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+
+table, th, td {
+  border: 1px solid black;
+}
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.container .btn1 {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+.container .btn2 {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.container .btn:hover {
+  background-color: black;
+}
+.blink {
+  animation: blink 1s steps(1, end) infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Container holding the image and the text */
+.Dashcontainer {
+  position: relative;
+}
+
+/* Bottom right text */
+.text-block {
+  position: absolute;
+  bottom: 10px;
+  left: 20%;
+  background-color: black;
+  color: red;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+</style>
+</head>
+<body>
+
+<h2 style="color: green;text-align: center;">Ford Eelectric Car Dash</h2>
+
+<div class="Dashcontainer">
+  <img src="https://i.pinimg.com/originals/73/4e/67/734e6745782492508c2d719df2e7dc5b.jpg" alt="Dash" style="width:100%;height:400px;">
+  <div class="text-block">
+    <h4 style="color:green">Ford Smart Notification</h4>
+    <p id="notification" class="blink">What a beautiful Ford Car</p>
+  </div>
+</div>
+<h2 style="color: blue"> Control Command </h2>
+<button class="btn1"><a href="/stolen_car" target="dashFrame"> Alarm </a></button>
+<button class="btn1"><a href="http://xxx.xxx.xxx.xxx/garage" target="dashFrame" witdth="100%" height="700"> Garage Open</a></button>
+<button class="btn1"><a href="/ev_scheduling" target="dashFrame"> EV Scheduling</a></button>
+<button class="btn1"><a href="https://www.here.com/directions/drive/start:42.300290,-83.205193/end:42.300290,-83.205193" target="dashFrame"> Car Location</button>
+<button class="btn1"><a href="xxx.xxx.xxx.xxx/garage" target="dashFrame"> SMS </a></button>
+<button class="btn1"><a href="https://www.youtube.com/embed/gmAU8MJoJU4?autoplay=1&mute=1" target="dashFrame"> Entertainment </a></button>
+<h2 style="font-size:10px;color:blue" ><i> @Developed by Ezra & Nam Soo Park</i></h2>
+
+<iframe 
+                 width="100%"
+                 height="800px"
+                 src="https://www.youtube.com/embed/gmAU8MJoJU4?autoplay=1&mute=1" name="dashFrame" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</body>
+</html>
+
+
+
+
+
+
